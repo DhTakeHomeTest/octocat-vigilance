@@ -1,0 +1,53 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ABC92F99-7818-4B6F-B3A4-2D0D3C02EB82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctocatVigilance.Web", "src\OctocatVigilance.Web\OctocatVigilance.Web.csproj", "{B261AE55-ED17-4078-9D83-A2E1B375E55B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctocatVigilance.Api", "src\OctocatVigilance.Api\OctocatVigilance.Api.csproj", "{47761DF2-D27F-4E07-8FAB-F748345F1366}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B39098F8-2A8E-4D05-ACD3-4C9F755CBE46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctocatVigilance.Services", "src\OctocatVigilance.Services\OctocatVigilance.Services.csproj", "{609FA93C-D0BF-452F-A083-80EFD72E9324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctocatVigilance.Services.Tests", "tests\OctocatVigilance.Services.Tests\OctocatVigilance.Services.Tests.csproj", "{BBAB8F0E-DA80-47C3-8DFD-4DD64EE0D214}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B261AE55-ED17-4078-9D83-A2E1B375E55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B261AE55-ED17-4078-9D83-A2E1B375E55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B261AE55-ED17-4078-9D83-A2E1B375E55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B261AE55-ED17-4078-9D83-A2E1B375E55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47761DF2-D27F-4E07-8FAB-F748345F1366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47761DF2-D27F-4E07-8FAB-F748345F1366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47761DF2-D27F-4E07-8FAB-F748345F1366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47761DF2-D27F-4E07-8FAB-F748345F1366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609FA93C-D0BF-452F-A083-80EFD72E9324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609FA93C-D0BF-452F-A083-80EFD72E9324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609FA93C-D0BF-452F-A083-80EFD72E9324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609FA93C-D0BF-452F-A083-80EFD72E9324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAB8F0E-DA80-47C3-8DFD-4DD64EE0D214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAB8F0E-DA80-47C3-8DFD-4DD64EE0D214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAB8F0E-DA80-47C3-8DFD-4DD64EE0D214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAB8F0E-DA80-47C3-8DFD-4DD64EE0D214}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {192FB94C-DCC3-44A4-9FE0-130D81D640BB}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B261AE55-ED17-4078-9D83-A2E1B375E55B} = {ABC92F99-7818-4B6F-B3A4-2D0D3C02EB82}
+		{47761DF2-D27F-4E07-8FAB-F748345F1366} = {ABC92F99-7818-4B6F-B3A4-2D0D3C02EB82}
+		{609FA93C-D0BF-452F-A083-80EFD72E9324} = {ABC92F99-7818-4B6F-B3A4-2D0D3C02EB82}
+		{BBAB8F0E-DA80-47C3-8DFD-4DD64EE0D214} = {B39098F8-2A8E-4D05-ACD3-4C9F755CBE46}
+	EndGlobalSection
+EndGlobal
