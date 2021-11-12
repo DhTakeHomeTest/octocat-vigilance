@@ -1,87 +1,26 @@
 # octocat-vigilance - Main Branch Protection WebService For GitHub
 
-octocat-vigilance is a web a simple web service that listens for organization events to know when a repository has been created. When a new repository is created the main branch is automatically protected. A new issue is also added to the repository mentioning the account owner of the new protections added. Interactivity with GitHub API is using [Octokit](https://github.com/octokit/octokit.net/).
-
-## Usage examples
-
-Get public info on a specific user.
-
-```c#
-var github = new GitHubClient(new ProductHeaderValue("MyAmazingApp"));
-var user = await github.User.Get("half-ogre");
-Console.WriteLine(user.Followers + " folks love the half ogre!");
-```
-
-## Supported Platforms
-
-* .NET 4.6 (Desktop / Server) or greater
-* [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) or greater
+octocat-vigilance is a simple web service that listens for organization events to know when a repository has been created. When a new repository is created the main branch is automatically protected. A new issue is also added to the repository mentioning the account owner of the new protections added. Interactivity with GitHub API is using [Octokit](https://github.com/octokit/octokit.net/).
 
 ## Getting Started
 
-Octokit is a GitHub API client library for .NET and is [available on NuGet](https://www.nuget.org/packages/Octokit/):
+The first step is determine where the web service will be hosted. From my purposes this is to be deployed directly to Azure App Services. Learning how to get started with App Services and how to configure the azure environment can be found at [Quickstart: Deploy an ASP.NET web app](https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore?tabs=net60&pivots=development-environment-vs).
 
-```
-dotnet add package Octokit
-```
+Once your App Services instance has been configured, you can configure your publish profile to have your development environment deploy directly to Azure. Details can be found on MSDN: [Publish an ASP.NET Core app to Azure with Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-5.0).
 
-There is also an IObservable based GitHub API client library for .NET using Reactive Extensions:
+Once deployed in Azure you are required to configure the settings used by the web service. Inside of Azure portal go to the configuration page for the app service.
 
-```
-dotnet add package Octokit.Reactive
-```
+There are three settings which need updating:
 
+-GithubClientSettings__User - Your GitHub username
+-GithubClientSettings__PAT - A Personal access token to give access to the API. This should be created in accordance with the guide [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+-ApplicationInsights__InstrumentationKey - This is the instrumentation key for your application insights instance as set up using the guide above.
 
+## References Used
 
-## Build
-
-Octokit is a single assembly designed to be easy to deploy anywhere.
-
-To clone and build it locally click the "Clone in Desktop" button above or run the
-following git commands.
-
-```
-git clone git@github.com:octokit/Octokit.net.git Octokit
-cd Octokit
-```
-
-To build the libraries, run the following command:
-
-Windows: `.\build.ps1`
-
-Linux/OSX: `./build.sh`
-
-## Contribute
-
-Visit the [Contributor Guidelines](https://github.com/octokit/octokit.net/blob/main/CONTRIBUTING.md)
-for more details. All contributors are expected to follow our
-[Code of Conduct](https://github.com/octokit/octokit.net/blob/main/CODE_OF_CONDUCT.md).
-
-## Problems?
-
-If you find an issue with our library, please visit the [issue tracker](https://github.com/octokit/octokit.net/issues)
-and report the issue.
-
-Please be kind and search to see if the issue is already logged before creating
-a new one. If you're pressed for time, log it anyways.
-
-When creating an issue, clearly explain
-
-* What you were trying to do.
-* What you expected to happen.
-* What actually happened.
-* Steps to reproduce the problem.
-
-Also include any other information you think is relevant to reproduce the
-problem.
-
-## Related Projects
-
- - [ScriptCs.OctoKit](https://github.com/hnrkndrssn/ScriptCs.OctoKit) - a [script pack](https://github.com/scriptcs/scriptcs/wiki/Script-Packs) to use Octokit in scriptcs
- - [ScriptCs.OctokitLibrary](https://github.com/ryanrousseau/ScriptCs.OctokitLibrary) - a [script library](https://github.com/scriptcs/scriptcs/wiki/Script-Libraries) to use Octokit in scriptcs
+[GithubWebhook](https://github.com/PromoFaux/GithubWebhook) - This nuget package is used for defining the proxy classes sent by Github Webhooks
+[Octokit.net](https://github.com/octokit/octokit.net) - This nuget package is used to communicate with the GitHub API, the documentation is referenced from [Octokit.net - docs](https://octokitnet.readthedocs.io/en/latest/)
 
 ## Copyright and License
 
-Copyright 2017 GitHub, Inc.
-
-Licensed under the [MIT License](https://github.com/octokit/octokit.net/blob/main/LICENSE.txt)
+Licensed under the [MIT License](https://opensource.org/licenses/MIT)
