@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
 	<PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TargetFramework>net5.0</TargetFramework>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(RunConfiguration)' == 'OctocatVigilance' " />
 	<ItemGroup>
@@ -19,5 +19,11 @@
 	  <ProjectReference Include="..\OctocatVigilance.Services\OctocatVigilance.Services.csproj">
 	    <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
 	  </ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Properties\PublishProfiles\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Properties\PublishProfiles\" />
 	</ItemGroup>
 </Project>
