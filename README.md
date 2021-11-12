@@ -16,13 +16,13 @@ There are three settings which need updating:
 - GithubClientSettings__PAT - A Personal access token to give access to the API. This should be created in accordance with the guide [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - ApplicationInsights__InstrumentationKey - This is the instrumentation key for your application insights instance as set up using the guide above.
 
-![Screen of app service configuration settings](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/AppServiceConfiguration.png?token=AL4AICJ6F73YB5GNJRCRGSTBRY746)
+![Screen of app service configuration settings](https://github.com/DhTakeHomeTest/octocat-vigilance/blob/main/assets/AppServiceConfiguration.png?raw=true)
 
 Following configuration of the web service, next you need to configure a GitHub [Webhook](https://developer.github.com/webhooks/) to point to the url of the app service configured. You can see the base url for the service on the app service overview page. The Webhook is this base url + "GitHubWebhook".
 
-![Screenshot of App Service Overview](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/AppServiceConfiguration.png?token=AL4AICMWWL4R3WEEX422VJDBRZAGG)
+![Screenshot of App Service Overview](https://github.com/DhTakeHomeTest/octocat-vigilance/blob/main/assets/AppServiceConfiguration.png?raw=true)
 
-![Screenshot of Github Webhooks configuration](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/GitHubWebHook.png?token=AL4AICPQEE3CTNAG5DTSHOTBRZADC)
+![Screenshot of Github Webhooks configuration](https://github.com/DhTakeHomeTest/octocat-vigilance/blob/main/assets/GitHubWebHook.png?raw=true)
 
 
 ## The proof is in the pudding
@@ -30,16 +30,16 @@ Following configuration of the web service, next you need to configure a GitHub 
 After deployment and configuration are complete. We can see the magic work.
 
 - Simply create a new repository
-![Creating a new repository](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/GithubNewRepository.png?token=AL4AICMU6FZFBVHVLPN2SDTBRZCGW)
+![Creating a new repository](https://github.com/DhTakeHomeTest/octocat-vigilance/blob/main/assets/GithubNewRepository.png?raw=true)
 
 - After a shot delay (whilst the web service acts in the background, refresh the page to see the new issue being notified:
-![Issue notification](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/GithubIssuesNotification.png?token=AL4AICLYM4CFYEJ7QPL4G3DBRZCG2)
+![Issue notification](https://github.com/DhTakeHomeTest/octocat-vigilance/blob/main/assets/GithubIssuesNotification.png?raw=true)
 
 - Drill down to the issue, to see the notification message:
-![Issue added](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/GithubAddedIssue.png?token=AL4AICJNDYJT6GM3QRMH6VLBRZCHC)
+![Issue added](https://github.com/DhTakeHomeTest/octocat-vigilance/blob/main/assets/GithubAddedIssue.png?raw=true)
 
 - Look to the repository settings and click on the branches like to see the protection rules
-![Branch protection rules](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/GithubBranchProtection.png?token=AL4AICNYEWKHRFDV36WGXW3BRZCG6)
+![Branch protection rules](https://github.com/DhTakeHomeTest/octocat-vigilance/blob/main/assets/GithubBranchProtection.png?raw=true)
 
 ## References Used
 
