@@ -12,13 +12,24 @@ Once deployed in Azure you are required to configure the settings used by the we
 
 There are three settings which need updating:
 
--GithubClientSettings__User - Your GitHub username
--GithubClientSettings__PAT - A Personal access token to give access to the API. This should be created in accordance with the guide [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
--ApplicationInsights__InstrumentationKey - This is the instrumentation key for your application insights instance as set up using the guide above.
+- GithubClientSettings__User - Your GitHub username
+- GithubClientSettings__PAT - A Personal access token to give access to the API. This should be created in accordance with the guide [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- ApplicationInsights__InstrumentationKey - This is the instrumentation key for your application insights instance as set up using the guide above.
+
+![Screen of app service configuration settings](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/AppServiceConfiguration.png?token=AL4AICJ6F73YB5GNJRCRGSTBRY746)
+
+Following configuration of the web service, next you need to configure a GitHub [Webhook](https://developer.github.com/webhooks/) to point to the url of the app service configured. You can see the base url for the service on the app service overview page. The Webhook is this base url + "GitHubWebhook".
+
+![Screenshot of App Service Overview](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/AppServiceConfiguration.png?token=AL4AICMWWL4R3WEEX422VJDBRZAGG)
+
+![Screenshot of Github Webhooks configuration](https://raw.githubusercontent.com/DhTakeHomeTest/octocat-vigilance/main/assets/GitHubWebHook.png?token=AL4AICPQEE3CTNAG5DTSHOTBRZADC)
+
+
 
 ## References Used
 
-[GithubWebhook](https://github.com/PromoFaux/GithubWebhook) - This nuget package is used for defining the proxy classes sent by Github Webhooks
+[GithubWebhook](https://github.com/PromoFaux/GithubWebhook) - This nuget package is used for defining the proxy classes sent by Github Webhooks.
+
 [Octokit.net](https://github.com/octokit/octokit.net) - This nuget package is used to communicate with the GitHub API, the documentation is referenced from [Octokit.net - docs](https://octokitnet.readthedocs.io/en/latest/)
 
 ## Copyright and License
